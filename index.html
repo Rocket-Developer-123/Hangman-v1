@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>SYSTEM BREACH</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Desktop Block Screen -->
+  <div id="desktop-block">
+    <div class="db-inner">
+      <div class="db-icon">⚠</div>
+      <p class="db-title">SYSTEM ERROR</p>
+      <p class="db-msg">Mobile connection required.<br/>Please view on a mobile device.</p>
+    </div>
+  </div>
+
+  <!-- Main Game Wrapper -->
+  <div id="game-wrapper">
+
+    <!-- PHASE 1: THE FIREWALL -->
+    <div id="phase-1" class="phase active">
+      <div class="phase-content">
+        <div class="terminal-header">
+          <span class="blink">▌</span> SYSTEM BREACH <span class="blink">▌</span>
+        </div>
+        <div class="role-badge">[ FIREWALL PROTOCOL ]</div>
+        <div class="divider"></div>
+        <p class="instruction">OPERATOR: Enter the target keyword.<br/>Agent must not see this input.</p>
+        <div class="input-group">
+          <label class="input-label" for="secret-word">SECRET KEYWORD:</label>
+          <input
+            type="password"
+            id="secret-word"
+            class="terminal-input"
+            placeholder="TYPE HERE..."
+            autocomplete="off"
+            autocorrect="off"
+            autocapitalize="none"
+            spellcheck="false"
+            maxlength="20"
+          />
+          <div id="word-error" class="error-msg hidden">⚠ INVALID: Letters only. Min 2 chars.</div>
+        </div>
+        <button id="lock-btn" class="btn-primary">
+          <span class="btn-icon">🔒</span> LOCK SYSTEM
+        </button>
+        <div class="scan-line"></div>
+      </div>
+    </div>
+
+    <!-- PHASE 2: THE HACKER -->
+    <div id="phase-2" class="phase">
+      <div class="phase-content">
+
+        <!-- Header -->
+        <div class="terminal-header small">
+          <span class="blink">▌</span> INFILTRATION IN PROGRESS <span class="blink">▌</span>
+        </div>
+
+        <!-- Security Breach Bar -->
+        <div class="breach-section">
+          <div class="breach-label">
+            <span>SECURITY BREACH</span>
+            <span id="mistake-count">0 / 6</span>
+          </div>
+          <div class="breach-track">
+            <div id="breach-bar" class="breach-bar"></div>
+            <div class="breach-segments">
+              <div class="seg"></div><div class="seg"></div>
+              <div class="seg"></div><div class="seg"></div>
+              <div class="seg"></div><div class="seg"></div>
+            </div>
+          </div>
+          <div id="threat-level" class="threat-level">THREAT: <span>MINIMAL</span></div>
+        </div>
+
+        <!-- Masked Word Display -->
+        <div id="word-display" class="word-display"></div>
+
+        <!-- Wrong Letters -->
+        <div class="wrong-section">
+          <span class="wrong-label">BLOCKED:</span>
+          <span id="wrong-letters" class="wrong-letters"></span>
+        </div>
+
+        <!-- On-screen Keyboard -->
+        <div id="keyboard" class="keyboard">
+          <div class="key-row" id="row-1"></div>
+          <div class="key-row" id="row-2"></div>
+          <div class="key-row" id="row-3"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ENDGAME OVERLAY -->
+    <div id="overlay" class="overlay hidden">
+      <div class="overlay-box">
+        <div id="overlay-icon" class="overlay-icon"></div>
+        <div id="overlay-title" class="overlay-title"></div>
+        <div id="overlay-sub" class="overlay-sub"></div>
+        <div class="overlay-word-reveal">
+          <span class="reveal-label">KEYWORD:</span>
+          <span id="reveal-word" class="reveal-word"></span>
+        </div>
+        <button id="reboot-btn" class="btn-primary">
+          <span class="btn-icon">⚡</span> REBOOT SYSTEM
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
